@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+    
+  <groupId>com.example</groupId>
+  <artifactId>helloworld</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  <name>helloworld</name>
+  <url>http://maven.apache.org</url>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache</groupId>
+      <artifactId>kafka</artifactId>
+      <version>0.7.2</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/core/target/scala_2.8.0/kafka-0.7.2.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>snappy</artifactId>
+      <version>1.0.4.1</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/core/lib_managed/scala_2.8.0/compile/snappy-java-1.0.4.1.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.apache</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.15</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/core/lib_managed/scala_2.8.0/compile/log4j-1.2.15.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>jopt</groupId>
+      <artifactId>simple</artifactId>
+      <version>3.2</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/core/lib_managed/scala_2.8.0/compile/jopt-simple-3.2.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.apache</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>3.3.4</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/core/lib_managed/scala_2.8.0/compile/zookeeper-3.3.4.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.I0Itec</groupId>
+      <artifactId>zkclient</artifactId>
+      <version>0.1</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/core/lib_managed/scala_2.8.0/compile/zkclient-0.1.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.8.0</version>
+      <scope>system</scope>
+      <systemPath>${kafka.home}/project/boot/scala-2.8.0/lib/scala-library.jar</systemPath>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.5.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <configuration>
+          <classpathScope>test</classpathScope>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
