@@ -49,23 +49,31 @@
 　(準備中)
 
     Sample0.8.1/
-      +helloworld/                             :プロジェクトディレクトリ
+      +helloworld/                             :Mavenプロジェクトディレクトリ
         +src/
           +main/
 
             +java/
+              +com/
+                +example/
+                  - ConsumerSample6.java        :６章 Consumer
+                  - ConsumerSample7.java        :６章 Consumer
+                  - HelloWorldConsumer.java     :２章 Kafkaを使ってみよう
+                  - HelloWorldProducer.java     :２章 Kafkaを使ってみよう
+                  - Log4jAppenderTestApp.java   :２章 Kafkaを使ってみよう
+                  - ProducerSample3.java        :５章 Producer
+                  - ProducerSample4.java        :５章 Producer
+
+            +resources/
+              - ConsumerSample7.properties      :６章 Consumer
+              - log4j.properties                :２章 Kafkaを使ってみよう
+              - log4j.xml                       :２章 Kafkaを使ってみよう
+              - ProducerSample3.properties      :５章 Producer
+
+        - pom.xml                               :２章 Kafkaを使ってみよう
+        - pom.0.8.0.xml                         :２章 Kafkaを使ってみよう(Kafka0.8.0用)
 
 　  
 　  
 　  
 
-## 訂正情報
-　次回更新時に下記内容を修正する予定です。ご迷惑おかけして申し訳ありません。
-
-#### ■5と6章のサンプルコード
-　書籍内のサンプルコードはトピック名が"Sample"と"sample"で混在していますが、"sample"に統一します。このページに登録しているサンプルソースは"sample"に統一してあります。
-
-#### ■4.1.6設定
-　log.roll.hoursの説明として、「ログ中のセグメントファイルが切り替わる間隔（分）を指定します。」としていますが、"（分）" ⇒ "（時間）"の誤りです。
-
-　なお、Appendixの当該説明では正しく記載されています。
